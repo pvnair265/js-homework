@@ -3,13 +3,15 @@ import { TestBed, async } from '@angular/core/testing';
 
 import { MaterialModule, MdCardModule, MdGridListModule, MdIconModule, MdToolbarModule, MdButtonModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+import { AddUserComponent} from './user/add-user/add-user.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LogoutComponent } from './account/logout.component';
 import { UserDetailComponent } from './user/detail.component';
 import { APP_BASE_HREF } from '@angular/common';
-
+import {FormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -19,9 +21,9 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       providers: [ {provide: APP_BASE_HREF, useValue: '/'} ],
       declarations: [
-        AppComponent, DashboardComponent, UserInfoComponent, LogoutComponent, UserDetailComponent
+        AppComponent, DashboardComponent, UserInfoComponent, LogoutComponent, UserDetailComponent, AddUserComponent
       ],
-      imports: [ MaterialModule.forRoot(), AppRoutingModule ],
+      imports: [ MaterialModule, AppRoutingModule, FormsModule, BrowserAnimationsModule  ],
     }).compileComponents();
   }));
 

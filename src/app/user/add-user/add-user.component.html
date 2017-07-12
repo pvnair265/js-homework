@@ -1,0 +1,38 @@
+<div class="mt">
+<md-grid-list cols="4" rowHeight="300px" gutterSize="10px"> 
+ <md-grid-tile colspan="4">
+  <md-card>
+  <md-card-header>
+    <md-icon md-card-avatar color="accent">person_add</md-icon>
+    <md-card-title><h3>Add User</h3></md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <form class="add_user_form" (submit)="addUser()" novalidate>
+      <md-input-container class="full-width displayinline">
+        <input mdInput type="email" placeholder="Email Address" name="email" [(ngModel)]="email" required />
+        <md-error *ngIf="errorData.email"> {{errorData.email}}</md-error>
+    </md-input-container>
+      <table class="full-width" cellspacing="0" class="pblg">
+        <tr>
+          <td>
+            <md-input-container class="full-width">
+              <input mdInput placeholder="First name" name="firstname" [(ngModel)]="firstname" required>
+            <md-error *ngIf="errorData.firstname"> {{errorData.firstname}}</md-error>
+            </md-input-container>
+          </td>
+          <td>
+            <md-input-container class="full-width">
+              <input mdInput placeholder="Last Name" name="lastname" [(ngModel)]="lastname" required>
+              <md-error *ngIf="errorData.lastname"> {{errorData.lastname}}</md-error>
+            </md-input-container>
+          </td>
+        </tr>
+      </table>
+      <button type="submit" md-raised-button color="accent"><md-icon class="mrs">person_add</md-icon>Add</button>
+    </form>
+
+  </md-card-content>
+</md-card>
+  </md-grid-tile>
+</md-grid-list>
+</div>

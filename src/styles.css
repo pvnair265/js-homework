@@ -1,3 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/purple-green.css';
-
+.displayinline { display: inline !important;}
+.mt { margin-top: 20px;}
+.mrs { margin-right: 5px;}
+.mat-card-header { align-items: center;}
+.mat-card-avatar { height: 20px !important; }
+.pblg { padding-bottom:20px; }
